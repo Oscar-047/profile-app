@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Profile - Result</title>
+    <style>
+        body { font-family: Arial; max-width: 400px; margin: 50px auto; }
+        .field { margin: 10px 0; }
+        .label { font-weight: bold; }
+        a { display: inline-block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Your Details</h1>
+
+    {% if profile %}
+        <div class="field"><span class="label">Name:</span> {{ profile.name }}</div>
+        <div class="field"><span class="label">Age:</span> {{ profile.age }}</div>
+        <div class="field"><span class="label">City:</span> {{ profile.city }}</div>
+    {% else %}
+        <p>No profile found. Please submit the form first.</p>
+    {% endif %}
+
+    <a href="/">← Enter another</a>
+</body>
+</html>
